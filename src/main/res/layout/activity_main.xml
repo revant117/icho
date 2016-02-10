@@ -48,4 +48,14 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="30dp"/>
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="infinite"
+        android:id="@+id/infbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickInfinite"/>
+
 </RelativeLayout>

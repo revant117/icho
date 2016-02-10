@@ -1,5 +1,6 @@
 package com.example.rev.retrofitpicaso;
 
+import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView text ;
         Button button;
+        Button infbutton;
         EditText editText;
         ProgressBar pb;
         String API = "https://api.github.com";
@@ -45,10 +47,12 @@ public class MainActivity extends AppCompatActivity {
 //        Picasso.with(this)
 //                .load("https://cms-assets.tutsplus.com/uploads/users/21/posts/19431/featured_image/CodeFeature.jpg")
 //                .into(image);
-        gitModel gitmodel = new gitModel();
+
         text = (TextView)findViewById(R.id.textView);
         button = (Button) findViewById(R.id.buttonMain);
         editText = (EditText) findViewById(R.id.editText);
+        infbutton = (Button) findViewById(R.id.infbutton);
+
         pb = (ProgressBar)findViewById(R.id.progressBar);
         pb.setVisibility(View.INVISIBLE);
 
@@ -83,6 +87,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+    }
+
+    public void onClickInfinite(View view){
+        Intent i =new Intent(this , infinite.class);
+        startActivity(i);
 
     }
 
